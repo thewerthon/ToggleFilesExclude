@@ -1,7 +1,7 @@
 ﻿# Toggle Files Exclude
 
-A VSCode extension that quickly toggles the `files.exclude` setting.
+[![Last Updated](https://raw.githubusercontent.com/thewerthon/ToggleFilesExclude/badges/updated.svg)](../../releases)
+[![Main Files](https://raw.githubusercontent.com/thewerthon/ToggleFilesExclude/badges/files.svg)](./README.md)
+[![Code Lines](https://raw.githubusercontent.com/thewerthon/ToggleFilesExclude/badges/lines.svg)](./README.md)
 
-## Features
-
-- Instantly toggle `files.exclude` settings with one click
+Instantly toggle `files.exclude` rules with one click and configurable behavior.
