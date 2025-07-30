@@ -1,0 +1,8 @@
+﻿.gitignore
+.vscode
+node_modules
+src
+
+eslint.config.mjs
+tsconfig.json
+vite.config.mts

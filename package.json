@@ -1,0 +1,116 @@
+{
+	"name": "toggle-files-exclude",
+	"displayName": "Toggle Files Exclude",
+	"version": "1.0.0",
+	"description": "Instantly toggle `files.exclude` settings with one click",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/thewerthon/VsCode-ToggleFilesExclude"
+	},
+	"license": "MIT",
+	"publisher": "thewerthon",
+	"main": "dist/extension.js",
+	"scripts": {
+		"build": "vite build",
+		"watch": "conc npm:watch:*",
+		"watch:1:typecheck": "tsc -w -noEmit --preserveWatchOutput",
+		"watch:2:compile": "vite build -w",
+		"watch:3:config": "nodemon -w vite.config.mts -x \"vite build\"",
+		"package": "vsce package --out dist/toggle-files-exclude.vsix"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "toggleFilesExclude.toggle",
+				"title": "Toggle Files Exclude: Toggle"
+			},
+			{
+				"command": "toggleFilesExclude.hide",
+				"title": "Toggle Files Exclude: Hide",
+				"icon": "$(eye)"
+			},
+			{
+				"command": "toggleFilesExclude.show",
+				"title": "Toggle Files Exclude: Show",
+				"icon": "$(eye-closed)"
+			}
+		],
+		"menus": {
+			"view/title": [
+				{
+					"command": "toggleFilesExclude.show",
+					"group": "navigation@0",
+					"when": "view == 'workbench.explorer.fileView' && toggleFilesExclude.isExcluded"
+				},
+				{
+					"command": "toggleFilesExclude.hide",
+					"group": "navigation@0",
+					"when": "view == 'workbench.explorer.fileView' && !toggleFilesExclude.isExcluded"
+				}
+			]
+		},
+		"configuration": {
+			"title": "Toggle Files Exclude",
+			"properties": {
+				"toggleFilesExclude.useGlobalScope": {
+					"type": "boolean",
+					"default": true,
+					"title": "Use Global Scope",
+					"description": "Allow to use global user settings (user settings.json)."
+				},
+				"toggleFilesExclude.useWorkspaceScope": {
+					"type": "boolean",
+					"default": true,
+					"title": "Use Workspace Scope",
+					"description": "Allow to use workspace settings (.vscode/settings.json)."
+				},
+				"toggleFilesExclude.useWorkspaceFolderScope": {
+					"type": "boolean",
+					"default": true,
+					"title": "Use Workspace Folders Scope",
+					"description": "Allow to use settings of specific folders in a multi-root workspace."
+				}
+			}
+		}
+	},
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"prettier": {
+		"arrowParens": "always",
+		"plugins": [
+			"prettier-plugin-packagejson"
+		],
+		"printWidth": 100,
+		"trailingComma": "all"
+	},
+	"devDependencies": {
+		"@eslint/compat": "^1.2.5",
+		"@eslint/js": "^9.18.0",
+		"@types/eslint__js": "^8.42.3",
+		"@types/node": "^22.10.7",
+		"@types/vscode": "^1.96.0",
+		"@typescript-eslint/parser": "^8.20.0",
+		"concurrently": "^9.1.2",
+		"deepmerge": "^4.3.1",
+		"eslint": "^9.18.0",
+		"eslint-config-alloy": "^5.1.2",
+		"eslint-import-resolver-typescript": "^3.7.0",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-no-autofix": "^2.1.0",
+		"eslint-plugin-unicorn": "^56.0.1",
+		"eslint-plugin-unused-imports": "^4.1.4",
+		"globals": "^15.14.0",
+		"nodemon": "^3.1.9",
+		"prettier": "^3.4.2",
+		"prettier-plugin-packagejson": "^2.5.7",
+		"rollup-plugin-node-externals": "^7.1.3",
+		"typescript": "^5.7.3",
+		"typescript-eslint": "^8.20.0",
+		"vite": "^6.0.7"
+	},
+	"engines": {
+		"vscode": "^1.96.0"
+	},
+	"icon": "docs/logo.png"
+}
