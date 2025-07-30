@@ -1,11 +1,11 @@
 {
-	"name": "toggle-files-exclude",
-	"displayName": "Toggle Files Exclude",
+	"name": "thewerthon-toggle-files-exclude",
+	"displayName": "Toggle Files Exclude (Extended)",
 	"version": "1.0.0",
-	"description": "Instantly toggle `files.exclude` settings with one click",
+	"description": "Instantly toggle `files.exclude` rules with one click and configurable behavior.",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/thewerthon/VsCode-ToggleFilesExclude"
+		"url": "https://github.com/thewerthon/ToggleFilesExclude"
 	},
 	"license": "MIT",
 	"publisher": "thewerthon",
