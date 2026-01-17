@@ -22,16 +22,22 @@
 		"commands": [
 			{
 				"command": "toggleFilesExclude.toggle",
-				"title": "Toggle Files Exclude: Toggle"
+				"title": "%command.toggle.long%",
+				"shortTitle": "command.toggle.short",
+				"category": "command.category"
 			},
 			{
 				"command": "toggleFilesExclude.hide",
-				"title": "Toggle Files Exclude: Hide",
+				"title": "%command.hide.long%",
+				"shortTitle": "command.hide.short",
+				"category": "command.category",
 				"icon": "$(eye)"
 			},
 			{
 				"command": "toggleFilesExclude.show",
-				"title": "Toggle Files Exclude: Show",
+				"title": "%command.show.long%",
+				"shortTitle": "command.show.short",
+				"category": "command.category",
 				"icon": "$(eye-closed)"
 			}
 		],

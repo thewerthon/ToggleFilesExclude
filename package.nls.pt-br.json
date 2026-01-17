@@ -1,0 +1,9 @@
+{
+	"command.category": "Arquivos Ocultos",
+	"command.toggle.short": "Alternar Arquivos",
+	"command.toggle.long": "Arquivos Ocultos: Alternar",
+	"command.hide.short": "Ocultar Arquivos",
+	"command.hide.long": "Arquivos Ocultos: Ocultar",
+	"command.show.short": "Exibir Arquivos",
+	"command.show.long": "Arquivos Ocultos: Exibir"
+}

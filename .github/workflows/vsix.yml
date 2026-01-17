@@ -1,0 +1,37 @@
+name: Generate VSIX
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install VSCE
+        run: npm install -g @vscode/vsce
+
+      - name: Compile Extension
+        run: npm run build
+
+      - name: Pack Extension
+        run: npm run package
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: toggle-files-exclude
+          path: dist/*.vsix
+          if-no-files-found: error
