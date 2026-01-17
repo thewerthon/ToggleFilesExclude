@@ -1,9 +1,9 @@
 {
 	"command.category": "Toggle Files Exclude",
-	"command.toggle.short": "Toggle Files",
-	"command.toggle.long": "Toggle Files Exclude: Toggle",
-	"command.hide.short": "Hide Files",
-	"command.hide.long": "Toggle Files Exclude: Hide",
-	"command.show.short": "Show Files",
-	"command.show.long": "Toggle Files Exclude: Show"
+	"command.toggle.short": "Toggle",
+	"command.toggle.long": "Toggle Files",
+	"command.hide.short": "Hide",
+	"command.hide.long": "Hide Files",
+	"command.show.short": "Show",
+	"command.show.long": "Show Files"
 }
